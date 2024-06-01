@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSRVD - Bhadrachalam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<>
+    <div id="seva-list" class="grid-container">
+        <div class="seva-item" onclick="showSevaDetails('seva1')">
+          <img src="/img.jpg" alt="Seva Icon">
+          <h3>Seva 1</h3>
+        </div>
+        <!-- Add more sevas here -->
+      </div>
+    
+      <div id="seva-details" style="display: none;">
+        <h2 id="seva-name">Seva Name</h2>
+        <div>
+          <label for="seva-date">Choose Date:</label>
+          <input type="text" id="seva-date" class="datepicker">
+        </div>
+        <div>
+          <label for="seva-time">Time Duration:</label>
+          <p id="seva-time">10:00 AM - 11:00 AM</p>
+        </div>
+        <div>
+          <label for="tickets">Available Tickets:</label>
+          <p id="available-tickets">50</p>
+        </div>
+        <div>
+          <label for="num-tickets">Number of Tickets:</label>
+          <input type="number" id="num-tickets" min="1" max="50">
+        </div>
+        <div>
+          <p>Total Amount: <span id="total-amount">0</span></p>
+        </div>
+        <button onclick="generateQRCode()">Make Payment</button>
+      </div>
+    
+      <div id="payment-section" style="display: none;">
+        <div id="qrcode"></div>
+        <button onclick="confirmPayment()">Confirm Payment</button>
+      </div>
+    
+      <div id="success-message" style="display: none;"></div>
+    
+      <script src="script.js"></script>
+      <script src="qrcode.min.js"></script>
+    
+      <script src="/script.js"></script>
+</body>
+</html>

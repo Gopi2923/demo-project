@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .seva-item {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .seva-item:hover {
+    transform: scale(1.05);
+  }
+  
+  #seva-details, #payment-section, #success-message {
+    margin: 20px;
+  }
+  
+  #qrcode {
+    margin: 20px 0;
+  }
+  
